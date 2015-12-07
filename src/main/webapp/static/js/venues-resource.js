@@ -29,7 +29,8 @@ angular.module('hungry.controllers').controller('UserController', UserController
 
 // constants
 angular.module('hungry.constants', [])
-    .constant('PATH', 'http://localhost:8080/hungry-rest');
+    .constant('API_PATH', 'https://hungry-server.azurewebsites.net/hungry-rest');
+    //.constant('PATH', 'http://localhost:8080/hungry-rest');
 
 
 // factories
@@ -37,7 +38,7 @@ var factoryModule = angular.module('hungry.factories', ['ngResource', 'hungry.co
 
 factoryModule.factory('VenueList', VenueListFactory);
 
-function VenueListFactory($resource, PATH) {
-    return $resource(PATH + '/api/venuelists');
+function VenueListFactory($resource, API_PATH) {
+    return $resource(API_PATH + '/api/venuelists');
 }
 

@@ -2,7 +2,8 @@
 <html ng-app="hungryUIApp">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="js/venues-controller.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.min.js"></script>
+    <script src="static/js/venues-resource.js"></script>
 </head>
 <body>
 <h1>Hungry? UI</h1>
@@ -10,7 +11,7 @@
 <h2>Venue Lists</h2>
 
 <div ng-controller="VenueListController as ctrl">
-    <span>Venue Lists {{ctrl.venueLists.length}}</span>
+    <span>Venue Lists: {{ctrl.venueLists.length}}</span>
     <ul>
         <li ng-repeat="venueList in ctrl.venueLists">
             <span>{{venueList.name}}</span>
