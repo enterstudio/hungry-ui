@@ -14,7 +14,7 @@
     <span>Venue Lists: {{ctrl.venueLists.length}}</span>
     <ul>
         <li ng-repeat="venueList in ctrl.venueLists">
-            <span>{{venueList.name}}</span>
+            <span>{{venueList.name}}</span> <a href="javascript:void(0)" ng-click="ctrl.deleteVenueList(venueList)">X</a>
         </li>
     </ul>
 
