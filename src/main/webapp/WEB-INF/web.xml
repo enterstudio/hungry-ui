@@ -8,7 +8,7 @@
         <welcome-file>/static/index-resource.html</welcome-file>
     </welcome-file-list>
 
-    <!--security-constraint>
+    <security-constraint>
         <web-resource-collection>
             <web-resource-name>Hungry? UI</web-resource-name>
             <url-pattern>/index.html</url-pattern>
@@ -19,11 +19,11 @@
     </security-constraint>
 
     <login-config>
-        <auth-method>OAuth</auth-method>
+        <auth-method>BASIC</auth-method>
     </login-config>
 
-    <!- Security roles ->
+    <!-- Security roles -->
     <security-role>
         <role-name>admin</role-name>
-    </security-role-->
+    </security-role>
 </web-app>
