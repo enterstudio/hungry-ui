@@ -32,11 +32,6 @@ angular.module('hungry.controllers').controller('VenueListController', VenueList
 angular.module('hungry.controllers').controller('UserController', UserController);
 
 
-// constants
-angular.module('hungry.constants', [])
-    .constant('API_PATH', 'http://localhost:8080/hungry-rest');
-
-
 // factories
 var factoryModule = angular.module('hungry.factories', ['ngResource', 'hungry.constants']);
 
