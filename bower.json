@@ -7,7 +7,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git@github.beeone.at:George/george-backoffice.git"
+    "url": "git://github.com/electrobabe/hungry-ui.git"
   },
   "ignore": [
     "**/.*",
