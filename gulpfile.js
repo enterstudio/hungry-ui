@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var jade = require('gulp-jade');
 var concat = require('gulp-concat');
 
-var sources = ['src/main/js/modules.js', 'src/main/js/**/*.js'];
+var sources = ['src/main/js/app/**/*.js'];
 var jadeSrc = 'src/main/jade/**/*.jade';
 
 var DEST = 'src/main/webapp';
@@ -28,7 +28,8 @@ function doConcat(confFile) {
 }
 
 gulp.task('concat', function () {
-    doConcat("src/main/js/constants.js");
+    doConcat("src/main/js/constants/constantsDev.js");
+    // doConcat("src/main/js/constants/constants.js");
 });
 
 gulp.task('jade', function (done) {

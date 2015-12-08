@@ -1,5 +1,3 @@
-angular.module('hungryUIApp', ['hungry.controllers']);
-
 // controllers
 function VenueListController(VenueList) {
     this.venueLists = VenueList.query();
@@ -23,25 +21,4 @@ function VenueListController(VenueList) {
     }
 }
 
-function UserController() {
-    // TODO
-}
-
-angular.module('hungry.controllers', ['hungry.constants', 'hungry.factories']);
-
 angular.module('hungry.controllers').controller('VenueListController', VenueListController);
-angular.module('hungry.controllers').controller('UserController', UserController);
-
-
-// factories
-var factoryModule = angular.module('hungry.factories', ['ngResource', 'hungry.constants']);
-
-factoryModule.factory('VenueList', VenueListFactory);
-
-function VenueListFactory($resource, API_PATH) {
-    return $resource(API_PATH + '/api/venuelists/:id',
-        {
-            id: '@id'
-        });
-}
-
