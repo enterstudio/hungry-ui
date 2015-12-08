@@ -1,3 +1,4 @@
+
 angular.module('hungryUIApp', ['hungry.controllers']);
 
 // controllers
@@ -48,4 +49,5 @@ function VenueListFactory($resource, API_PATH) {
             id: '@id'
         });
 }
+
 
