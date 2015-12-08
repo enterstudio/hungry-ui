@@ -11,12 +11,9 @@ var BOWER_HOME = 'src/main/webapp/static/bower_components';
 var libsMin = [
     BOWER_HOME + '/jquery/dist/jquery.min.js',
     BOWER_HOME + '/bootstrap/dist/js/bootstrap.min.js ',
-    BOWER_HOME + '/angular-resource/angular-resource.min.js'
+    BOWER_HOME + '/angular-resource/angular-resource.min.js',
+    BOWER_HOME + '/lodash/lodash.min.js'
 ];
-
-var libsDev = [
-    BOWER_HOME + '/angular/angular.js'
-].concat(libsMin);
 
 var libs = [
     BOWER_HOME + '/angular/angular.min.js'

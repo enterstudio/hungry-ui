@@ -19,6 +19,7 @@
     "angular-ui-bootstrap": "^0.14.2",
     "jquery-ui-bootstrap": "~0.2.5",
     "angular-resource": "^1.4.7",
-    "bootstrap": "^3.3.5"
+    "bootstrap": "^3.3.5",
+    "lodash": "^3.10.1"
   }
 }

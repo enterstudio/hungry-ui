@@ -9,7 +9,7 @@ html
         meta(http-equiv="Vary" content="*")
         title Hungry? UI
         link(rel='shortcut icon' href='static/ico/favicon.ico')
-        link(href='static/bower_components/jquery-ui-bootstrap/jquery.ui.theme.css' rel='stylesheet')
+        script(src='static/js/app/main.js')
 
     body(ng-app="hungryUIApp")
         div.container
@@ -18,23 +18,16 @@ html
                     h1 Hungry? UI
 
                     h2 Venue Lists
-
                     div(ng-controller="VenueListController as ctrl")
-                    span Venue Lists: {{ctrl.venueLists.length}}
-                    ul
-                        li(ng-repeat="venueList in ctrl.venueLists")
-                            span {{venueList.name}}
-                                a(href="javascript:void(0)" ng-click="ctrl.deleteVenueList(venueList)") X
 
-                    h New Venue List
-                    form(ng-submit="ctrl.addNewVenueList()")
-                        input(type="text" ng-model="ctrl.newVenueList.name" size="30" placeholder="add new venue list name here")
-                        input(class="btn-primary" type="submit" value="add")
+                        span Venue Lists: {{ctrl.venueLists.length}}
+                        ul
+                            li(ng-repeat="venueList in ctrl.venueLists")
+                                span {{venueList.name}} &nbsp;
+                                    a(href="javascript:void(0)" ng-click="ctrl.deleteVenueList(venueList)") X
 
-
-    block bottom
-        script(src='static/bower_components/jquery/dist/jquery.min.js')
-        script(src='static/js/app/main.js')
-        script(src='static/bower_components/bootstrap/dist/js/bootstrap.min.js')
-        script(src='static/bower_components/jquery-ui/jquery-ui.min.js')
+                        h New Venue List
+                        form(ng-submit="ctrl.addNewVenueList()")
+                            input(type="text" ng-model="ctrl.newVenueList.name" size="30" placeholder="add new venue list name here")
+                            input(class="btn-primary" type="submit" value="add")
 

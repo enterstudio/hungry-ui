@@ -17,7 +17,8 @@ function VenueListController(VenueList) {
 
     this.deleteVenueList = function (venueList) {
         venueList.$delete().then(function () {
-            this.venueLists.remove(venueList);
+            var index = _.findIndex(this.venueLists, venueList);
+            this.venueLists.splice(index, 1);
         }.bind(this));
     }
 }
