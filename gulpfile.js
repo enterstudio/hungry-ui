@@ -13,7 +13,8 @@ var libsMin = [
     BOWER_HOME + '/jquery/dist/jquery.min.js',
     BOWER_HOME + '/bootstrap/dist/js/bootstrap.min.js ',
     BOWER_HOME + '/angular-resource/angular-resource.min.js',
-    BOWER_HOME + '/lodash/lodash.min.js'
+    BOWER_HOME + '/lodash/lodash.min.js',
+    BOWER_HOME + '/angular-route/angular-route.min.js'
 ];
 
 var libs = [
@@ -55,7 +56,7 @@ function doWatch(concatTask) {
 }
 
 gulp.task('watch', function() {
-    doWatch("concat");
+    doWatch("concatDev");
 });
 
 gulp.task('default', ['concatDev', 'jade']);

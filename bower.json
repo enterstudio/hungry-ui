@@ -15,10 +15,11 @@
     "bower_components"
   ],
   "dependencies": {
-    "angular": "^1.4.7",
+    "angular": "^1.4.8",
+    "angular-route": "1.4.8",
+    "angular-resource": "^1.4.8",
     "angular-ui-bootstrap": "^0.14.2",
     "jquery-ui-bootstrap": "~0.2.5",
-    "angular-resource": "^1.4.7",
     "bootstrap": "^3.3.5",
     "lodash": "^3.10.1"
   }
