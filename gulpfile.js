@@ -1,4 +1,5 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
+    uglify = require('gulp-uglify');
 var jade = require('gulp-jade');
 var concat = require('gulp-concat');
 
@@ -22,14 +23,17 @@ var libs = [
 
 // pack js files into one single file
 function doConcat(confFile) {
-    gulp.src(libs.concat([confFile]).concat(sources))
+    gulp.src(libs)
+        .pipe(concat('libs.js'))
+        .pipe(gulp.dest(DEST + '/static/js/app/'));
+
+    gulp.src([confFile].concat(sources))
         .pipe(concat('main.js'))
         .pipe(gulp.dest(DEST + '/static/js/app/'));
 }
 
-gulp.task('concat', function () {
+gulp.task('concatDev', function () {
     doConcat("src/main/js/constants/constantsDev.js");
-    // doConcat("src/main/js/constants/constants.js");
 });
 
 gulp.task('jade', function (done) {
@@ -54,4 +58,19 @@ gulp.task('watch', function() {
     doWatch("concat");
 });
 
-gulp.task('default', ['concat', 'jade']);
+gulp.task('default', ['concatDev', 'jade']);
+
+
+// dist
+gulp.task('uglify', function() {
+    gulp.src([DEST + '/static/js/app/libs.js'].concat(["src/main/js/constants/constants.js", DEST + '/static/js/app/main.js']))
+        .pipe(uglify())
+        .pipe(concat('main.min.js'))
+        .pipe(gulp.dest(DEST + '/static/js/app/'));
+});
+
+gulp.task('concatDist', function () {
+    doConcat("src/main/js/constants/constants.js");
+});
+
+gulp.task('dist', ['concatDist', 'jade']);

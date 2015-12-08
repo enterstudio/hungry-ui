@@ -4,9 +4,11 @@ https://hungry-server.azurewebsites.net/hungry-ui/
 
 # install Hungry? app
 
-## prerequireies
+## prerequisites
 
 install npm
+
+install gulp with:
 >npm install --global gulp
 >npm install --save-dev gulp
 
@@ -16,7 +18,5 @@ install npm
 does:
 
 - npm install // installs build tool dependencies in package.json in dir "/node_modules"
-
 - bower --allow-root install // installs JS dependencies in bower.json into dir "/bower_components" (specified in .bowerrc)
-
 - gulp

@@ -4,8 +4,5 @@ var factoryModule = angular.module('hungry.factories', ['ngResource', 'hungry.co
 factoryModule.factory('VenueList', VenueListFactory);
 
 function VenueListFactory($resource, API_PATH) {
-    return $resource(API_PATH + '/api/venuelists/:id',
-        {
-            id: '@id'
-        });
+    return $resource(API_PATH + '/api/venuelists/:id', {id: '@id'});
 }
