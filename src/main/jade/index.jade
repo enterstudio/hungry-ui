@@ -10,12 +10,16 @@ html
         title Hungry? UI
         link(rel='shortcut icon' href='static/ico/favicon.ico')
 
-        script(src="index.js")
-        script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js")
-
     body(ng-app="hungryUIApp")
         div
         .container
             .row
                 .col-md-12
-                    Hello
+                    h1 Hello
+
+    block bottom
+        script(src='static/bower_components/jquery/dist/jquery.min.js')
+        script(src='static/js/app/main.js')
+        script(src='static/bower_components/bootstrap/dist/js/bootstrap.min.js')
+        script(src='static/bower_components/jquery-ui/jquery-ui.min.js')
+
