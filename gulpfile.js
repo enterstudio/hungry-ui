@@ -55,7 +55,7 @@ function doWatch(concatTask) {
     gulp.watch(['src/main/jade/**/*.jade'], ['jade']);
 }
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     doWatch("concatDev");
 });
 
@@ -63,8 +63,9 @@ gulp.task('default', ['concatDev', 'jade']);
 
 
 // dist
-gulp.task('uglify', function() {
-    gulp.src([DEST + '/static/js/app/libs.js'].concat(["src/main/js/constants/constants.js", DEST + '/static/js/app/main.js']))
+gulp.task('uglify', function () {
+    gulp.src([DEST + '/static/js/app/libs.js'].
+        concat(["src/main/js/constants/constants.js", DEST + '/static/js/app/main.js']))
         .pipe(uglify())
         .pipe(concat('main.min.js'))
         .pipe(gulp.dest(DEST + '/static/js/app/'));
