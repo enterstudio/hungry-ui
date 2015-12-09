@@ -1,20 +1,27 @@
 # Hungry UI - AngularJS App
 
-https://hungry-server.azurewebsites.net/hungry-ui/
+https://github.com/electrobabe/hungry-ui
 
-# install Hungry? app
+## Doc
 
-## prerequisites
+https://github.com/electrobabe/hungry-ui/docs/jquery-conf-berlin-ondrisek-plus-notes.pdf
+
+
+## install Hungry? UI App
+
+### prerequisites
 
 install npm
 
-install gulp with:
->npm install --global gulp
->npm install --save-dev gulp
+install gulp with
 
-## build
+- npm install --global gulp
+- npm install --save-dev gulp
 
->mvn clean install
+
+### build
+
+mvn clean install
 does:
 
 - npm install // installs build tool dependencies in package.json in dir "/node_modules"
