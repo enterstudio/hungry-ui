@@ -4,7 +4,7 @@ https://github.com/electrobabe/hungry-ui
 
 ## Doc
 
-https://github.com/electrobabe/hungry-ui/docs/jquery-conf-berlin-ondrisek-plus-notes.pdf
+https://github.com/electrobabe/hungry-ui/blob/master/docs/jquery-conf-berlin-ondrisek-plus-notes.pdf
 
 
 ## install Hungry? UI App
