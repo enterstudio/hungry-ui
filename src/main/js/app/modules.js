@@ -3,5 +3,5 @@ angular.module('hungryUIApp', [
     'ngRoute'
 ]);
 
-angular.module('hungry.controllers', ['hungry.constants', 'hungry.factories']);
+angular.module('hungry.controllers', ['hungry.constants', 'hungry.factories', 'hungry.directives']);
 

@@ -11,7 +11,7 @@ function VenueListController(VenueList) {
             this.venueLists.push(ret);
             this.newVenueList = new VenueList();
         }.bind(this), function (err) {
-            console.log("---err ", err);
+            console.log("err ", err);
         });
     };
 

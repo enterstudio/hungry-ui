@@ -26,8 +26,9 @@ html
                         span Venue Lists: {{ctrl.venueLists.length}}
                         ul
                             li(ng-repeat="venueList in ctrl.venueLists")
-                                span {{venueList.name}} &nbsp;
-                                    a(href="javascript:void(0)" ng-click="ctrl.deleteVenueList(venueList)") X
+                                venue-list-details
+                                | &nbsp;
+                                a(href="javascript:void(0)" ng-click="ctrl.deleteVenueList(venueList)") X
 
                         h New Venue List
                         form(ng-submit="ctrl.addNewVenueList()")

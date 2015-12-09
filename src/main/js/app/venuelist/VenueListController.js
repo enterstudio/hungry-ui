@@ -21,4 +21,6 @@ function VenueListController(VenueList) {
     }
 }
 
-angular.module('hungry.controllers').controller('VenueListController', VenueListController);
+angular.module('hungry.controllers')
+    .controller('VenueListController', VenueListController);
+
